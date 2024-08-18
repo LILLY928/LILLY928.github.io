@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#27374D;
+}
+header {
+    background-color: #DDE6ED;
+    padding: 10px 100px;
+    text-align: center;
+}
+.nav-buttons {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+}
+.nav-buttons button {
+    background-color: #526D82;
+    color: #DDE6ED;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}  
+.nav-buttons button:hover {
+    background-color: #27374D;
+}
+.main-content {
+    display: flex;
+    padding: 10px 20px;
+    height: calc(100vh - 70px);
+    margin: 0 100px; 
+}
+.panel {
+    padding: 40px;
+}
+.panel-left {
+    flex: 1;
+    border-right: 2px solid #DDE6ED;
+}
+.panel-right {
+    flex: 3;
+    flex-direction: column;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}   
+.profile-picture {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #DDE6ED;
+    object-fit: cover; 
+} 
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.social-links a {
+    color: #27374D;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: text-decoration 0.3s;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+.literature-block {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+.literature-info {
+    flex: 3;
+}
+.literature-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+.literature-links a {
+    color: #088395;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+.literature-links a:hover {
+    text-decoration: underline;
+}
+.custom-link {
+    color: #088395;
+    text-decoration: none;
+}
+.custom-link:hover {
+    text-decoration: underline;
+}
