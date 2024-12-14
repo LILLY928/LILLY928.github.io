@@ -5,46 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilly Liu</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function loadLeftPanel() {
+            fetch('panel-left.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('left-panel').innerHTML = data;
+            });
+        }
+    </script>
 </head>
-<body>
-    <header>
+<body onload="loadLeftPanel();">
+    <header class="header">
         <div class="nav-buttons">
-            <button onclick="window.location.href='index.html'">About</button>
-            <button onclick="window.location.href='research.html'">Research</button>
-            <button onclick="window.location.href='experience.html'">Experience</button>
+            <button class="nav-button" onclick="window.location.href='index.html'">About</button>
+            <button class="nav-button" onclick="window.location.href='research.html'">Research</button>
+            <button class="nav-button" onclick="window.location.href='experience.html'">Experience</button>
         </div>
     </header>
     <div class="main-content">
-        <div class="panel panel-left">
-            <img src="/Resources/profile-picture.png" alt="Profile Picture" class="profile-picture">
-            <h1>Lilly ("Yijin") Liu</h1>
-            <p class="sub-text">Computer Science & Applied Math<br>
-                Undergraduate • 2026 Fall<br>
-                College of William and Mary</p>
-            <br>            
-            <div class="social-links">
-                <a href="mailto:yliu85@wm.edu">
-                    <img src="/Resources/email.png" alt="Email Icon">
-                    yliu85@wm.edu
-                </a>
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank">
-                    <img src="/Resources/linkedin.png" alt="LinkedIn Icon">
-                    LinkedIn
-                </a>
-                <a href="https://github.com/LILLY928" target="_blank">
-                    <img src="/Resources/github.png" alt="GitHub Icon">
-                    GitHub
-                </a>
-                <a href="/Resources/LillyLiu-Resume.pdf" target="_blank">
-                    <img src="/Resources/resume.png" alt="Resume Icon">
-                    Resume
-                </a>
-                <a href="/Resources/LillyLiu-Transcript.pdf" target="_blank">
-                    <img src="/Resources/transcript.png" alt="Transcript Icon">
-                    Transcript
-                </a>
-            </div>
-
+        <div class="panel panel-left" id="left-panel">
         </div>
         <div class="panel panel-right">
             
@@ -72,6 +52,5 @@
             </p>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
