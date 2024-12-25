@@ -6,25 +6,96 @@
     <title>Lilly Liu</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function loadLeftPanel() {
-            fetch('panel-left.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('left-panel').innerHTML = data;
-            });
+        // function loadLeftPanel() {
+        //     fetch('panel-left.html')
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         document.getElementById('left-panel').innerHTML = data;
+        //     });
+        // }
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const targetPosition = section.offsetTop; // Get the section's position
+                const startPosition = window.pageYOffset; // Get current scroll position
+                const distance = targetPosition - startPosition;
+                const duration = 100; // Animation duration in ms
+                let start = null;
+
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    const scrollAmount = Math.min(progress / duration, 1); // Calculate scroll progress
+                    window.scrollTo(0, startPosition + distance * scrollAmount);
+
+                    if (progress < duration) {
+                        window.requestAnimationFrame(step);
+                    }
+                }
+
+                window.requestAnimationFrame(step);
+            }
+        }
+        function showZoom(element) {
+            const imageSrc = element.querySelector('img').src;
+            const overlay = document.getElementById('overlay');
+            const zoomedImage = document.getElementById('zoomedImage');
+            
+            zoomedImage.src = imageSrc;  // Set the image source to the one being hovered
+            overlay.style.display = 'flex';  // Show the overlay
+            zoomedImage.classList.add('zoomed-in');  // Apply zoom effect
+        }
+
+        function hideZoom(element) {
+            const zoomedImage = document.getElementById('zoomedImage');
+            zoomedImage.classList.remove('zoomed-in');  // Remove zoom effect
+        }
+
+        function closeZoom() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';  // Hide the overlay when clicked
         }
     </script>
 </head>
 <body onload="loadLeftPanel();">
     <header class="header">
-        <div class="nav-buttons">
-            <button class="nav-button" onclick="window.location.href='index.html'">About</button>
-            <button class="nav-button" onclick="window.location.href='research.html'">Research</button>
-            <button class="nav-button" onclick="window.location.href='experience.html'">Experience</button>
-        </div>
+        <!-- <div class="nav-buttons">
+            <button class="nav-button" onclick="scrollToSection('project')">Project</button>
+            <button class="nav-button" onclick="scrollToSection('research')">Research</button>
+            <button class="nav-button" onclick="scrollToSection('expereince')">Experience</button>
+        </div> -->
     </header>
     <div class="main-content">
         <div class="panel panel-left" id="left-panel">
+            <div class="nav-buttons">
+                <button class="nav-button" onclick="scrollToSection('project')">Project</button>
+                <button class="nav-button" onclick="scrollToSection('research')">Research</button>
+                <button class="nav-button" onclick="scrollToSection('expereince')">Experience</button>
+            </div>
+            <img src="/Resources/profile-picture.png" alt="Profile Picture" class="profile-picture">
+            <h1>Lilly ("Yijin") Liu</h1>
+            <p class="sub-text">Computer Science & Applied Math<br>
+                Undergraduate • 2026 Fall<br>
+                College of William and Mary</p>
+            <br>    
+            <div class="social-links">
+                <a href="mailto:yliu85@wm.edu">
+                    <img src="/Resources/email.png" alt="Email Icon">
+                    yliu85@wm.edu
+                </a>
+                <a href="https://www.linkedin.com/in/lilly-liu-16a903247/" target="_blank">
+                    <img src="/Resources/linkedin.png" alt="LinkedIn Icon">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/LILLY928" target="_blank">
+                    <img src="/Resources/github.png" alt="GitHub Icon">
+                    GitHub
+                </a>
+                <a href="/Resources/LillyLiu-Transcript.pdf" target="_blank">
+                    <img src="/Resources/transcript.png" alt="Transcript Icon">
+                    Transcript
+                </a>
+            </div>
         </div>
         <div class="panel panel-right">
             <h1>About Me</h1>
@@ -72,7 +143,7 @@
                 <li><a href="#" data-weight="7">R</a></li>
                 <li><a href="#" data-weight="4">JavaScript</a></li>
             </ul>
-            <div class="project-showcase">
+            <div class="project-showcase" id="project">
                 <h1>Projects</h1>
                 <p>Dive into my latest side projects and explore the cutting-edge tools, frameworks, and techniques I've used to bring these ideas to life.</p>
                 <div class="projects">
@@ -122,6 +193,38 @@
                     </div>
                     <!-- Add more projects as needed -->
                 </div>
+            </div>
+            <div id="research">
+                <h1>Research</h1>
+                <p>I am a research assistant in Prof. <a href="https://www.wm.edu/as/computerscience/people/gao_ye.php" class=custom-link>Ashley Gao</a>'s research team. 
+                    My research interest lies in Human-computer Interaction (HCI), Large Language Models (LLMs), and Software Engineering (SE).
+                </p>
+                <div class="literature-block">
+                    <div class="literature-info">
+                        <h3>Mapping the Trust Terrain: LLMs in Software Engineering - Insights and Perspectives. <span style="color: #9DB2BF;">ICSE'25</span></h3>
+                        <p>Khati Dipin, <strong>Yijin Liu</strong>, David N. Palacio, Yixuan Zhang, and Denys Poshyvanyk</p>
+                        <p>In the summer of 2024, I received a fellowship from the <a href="https://www.wm.edu/as/charlescenter/student-research/project-funding/summer/" class=custom-link>Charles Center</a> 
+                        to work on a project led by Professors <a href="https://zjanice.github.io/index.html" class=custom-link>Zhang</a> and <a href="https://www.cs.wm.edu/~denys/" class=custom-link>Poshyvanyk</a>. 
+                        The research involved exploring developers' trust in large language models (LLMs) for software engineering tasks through a combination of literature review and user studies. 
+                        I had the opportunity to present our findings at the <a href="https://www.wm.edu/as/charlescenter/student-research/research-events/fall-symposium/" class=custom-link>Fall Research Symposium</a>. </p>
+                        <div class="image-container">
+                            <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                                <img src="Resources/Symposium Poster.png" alt="Visualization 1" class="literature-image">
+                            </div>
+                            <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                                <img src="Resources/Pipeline for Survey.png" alt="Visualization 2" class="literature-image">
+                            </div>
+                        </div>
+                        
+                        <div class="overlay" id="overlay" onclick="closeZoom()">
+                            <img id="zoomedImage" src="" alt="Zoomed Image">
+                        </div>                    
+                    </div>
+                    <div class="literature-links">
+                        <a href="link-to-literature-page1" target="_blank">[Paper PDF]</a>
+                        <a href="link-to-literature-page2" target="_blank">[Repository]</a>
+                    </div>
+                </div>    
             </div>
         </div>
     </div>
