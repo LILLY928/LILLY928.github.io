@@ -41,8 +41,8 @@ body {
     display: flex;
     padding: 0 20px 10px;
     height: 100vh - 70px;
-    margin-left:20%;
-    margin-right:10%;
+    margin-left:15%;
+    margin-right:5%;
 }
 .panel-left {
     position: fixed;
@@ -91,7 +91,7 @@ body {
     height: 20px;
 }
 .literature-block {
-    width: 100%;
+    width: 95%;
     border-radius: 15px;
     background-color: #F5F5F5;
     padding: 20px;
@@ -296,4 +296,85 @@ ul.cloud * {
 
 .zoomed-in {
     transform: scale(1);  /* Zoom in */
+}
+/* .design-section {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: white;
+min-height: 100vh;
+font-family: Jost;
+color: black;
+} */
+
+.design {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.timeline {
+width: 100%;
+height: auto;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+.timeline-content {
+padding: 20px;
+background: white;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+padding: 1.75rem;
+transition: 0.4s ease;
+overflow-wrap: break-word !important;
+margin: 1rem;
+margin-bottom: 20px;
+border-radius: 6px;
+}
+
+.timeline-date-left{
+    text-align: right;          /* Align text to the right */
+    font-size: 1.2em;          /* Increase font size */
+    color: #333;               /* Change text color */
+    margin-right:20px;
+}
+
+.timeline-date-right{
+    text-align: left;          /* Align text to the right */
+    font-size: 1.2em;          /* Increase font size */
+    color: #333;               /* Change text color */
+    margin-left:20px;
+}
+
+.timeline-component {
+margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+        position: relative;
+        background-image: linear-gradient(45deg, #007BFF, #0056b3);
+        width: 3px;
+        height: 100%;
+    }
+    .main-middle {
+        opacity: 0;
+    }
+    .timeline-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #007BFF, #0056b3);
+        transform: translateX(-50%);
+    }
 }

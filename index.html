@@ -13,6 +13,14 @@
         //         document.getElementById('left-panel').innerHTML = data;
         //     });
         // }
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = '/Resources/resume.pdf'; // Path to your PDF file
+            link.download = 'Resume_Lilly_Liu.pdf'; // Desired name for the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }   
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
@@ -91,7 +99,7 @@
                     <img src="/Resources/github.png" alt="GitHub Icon">
                     GitHub
                 </a>
-                <a href="/Resources/LillyLiu-Transcript.pdf" target="_blank">
+                <a href="/Resources/transcript_250102.pdf" target="_blank">
                     <img src="/Resources/transcript.png" alt="Transcript Icon">
                     Transcript
                 </a>
@@ -109,7 +117,7 @@
                 <br>Outside of classes, I conduct research on machine learning, focusing on topics such as Generative AI, Human-LLM Interaction, and Domain Adaptation for transformers. 
                 I also work as IT support in the Technology Support Center and as a tutor at the Tutor Zone. In my free time, I enjoy pencil sketching and swimming.
             </p>
-            <button class="dl-button">Download Resume</button>        
+            <button class="dl-button" onclick="downloadResume();">Download Resume</button>        
             <h1>Skill Set</h1>
             <p>The following word cloud numerate the language and skills I process. Font size indicate familarity.
             </p>
@@ -194,40 +202,85 @@
                     <!-- Add more projects as needed -->
                 </div>
             </div>
-            <div id="research">
-                <h1>Research</h1>
-                <p>I am a research assistant in Prof. <a href="https://www.wm.edu/as/computerscience/people/gao_ye.php" class=custom-link>Ashley Gao</a>'s research team. 
-                    My research interest lies in Human-computer Interaction (HCI), Large Language Models (LLMs), and Software Engineering (SE).
-                </p>
-                <div class="literature-block">
-                    <div class="literature-info">
-                        <h3>Mapping the Trust Terrain: LLMs in Software Engineering - Insights and Perspectives. <span style="color: #9DB2BF;">ICSE'25</span></h3>
-                        <p>Khati Dipin, <strong>Yijin Liu</strong>, David N. Palacio, Yixuan Zhang, and Denys Poshyvanyk</p>
-                        <p>In the summer of 2024, I received a fellowship from the <a href="https://www.wm.edu/as/charlescenter/student-research/project-funding/summer/" class=custom-link>Charles Center</a> 
-                        to work on a project led by Professors <a href="https://zjanice.github.io/index.html" class=custom-link>Zhang</a> and <a href="https://www.cs.wm.edu/~denys/" class=custom-link>Poshyvanyk</a>. 
-                        The research involved exploring developers' trust in large language models (LLMs) for software engineering tasks through a combination of literature review and user studies. 
-                        I had the opportunity to present our findings at the <a href="https://www.wm.edu/as/charlescenter/student-research/research-events/fall-symposium/" class=custom-link>Fall Research Symposium</a>. </p>
-                        <div class="image-container">
-                            <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
-                                <img src="Resources/Symposium Poster.png" alt="Visualization 1" class="literature-image">
-                            </div>
-                            <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
-                                <img src="Resources/Pipeline for Survey.png" alt="Visualization 2" class="literature-image">
-                            </div>
+            <h1 id="research">Research</h1>
+            <p>I am a research assistant in Prof. <a href="https://www.wm.edu/as/computerscience/people/gao_ye.php" class=custom-link>Ashley Gao</a>'s research team. 
+                My research interest lies in Human-computer Interaction (HCI), Large Language Models (LLMs), and Software Engineering (SE).
+            </p>
+            <div class="literature-block">
+                <div class="literature-info">
+                    <h3>Mapping the Trust Terrain: LLMs in Software Engineering - Insights and Perspectives. <span style="color: #9DB2BF;">ICSE'25</span></h3>
+                    <p>Khati Dipin, <strong>Yijin Liu</strong>, David N. Palacio, Yixuan Zhang, and Denys Poshyvanyk</p>
+                    <p>In the summer of 2024, I received a fellowship from the <a href="https://www.wm.edu/as/charlescenter/student-research/project-funding/summer/" class=custom-link>Charles Center</a> 
+                    to work on a project led by Professors <a href="https://zjanice.github.io/index.html" class=custom-link>Zhang</a> and <a href="https://www.cs.wm.edu/~denys/" class=custom-link>Poshyvanyk</a>. 
+                    The research involved exploring developers' trust in large language models (LLMs) for software engineering tasks through a combination of literature review and user studies. 
+                    I had the opportunity to present our findings at the <a href="https://www.wm.edu/as/charlescenter/student-research/research-events/fall-symposium/" class=custom-link>Fall Research Symposium</a>. </p>
+                    <div class="image-container">
+                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                            <img src="Resources/Symposium Poster.png" alt="Visualization 1" class="literature-image">
                         </div>
-                        
-                        <div class="overlay" id="overlay" onclick="closeZoom()">
-                            <img id="zoomedImage" src="" alt="Zoomed Image">
-                        </div>                    
+                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                            <img src="Resources/Pipeline for Survey.png" alt="Visualization 2" class="literature-image">
+                        </div>
                     </div>
-                    <div class="literature-links">
-                        <a href="link-to-literature-page1" target="_blank">[Paper PDF]</a>
-                        <a href="link-to-literature-page2" target="_blank">[Repository]</a>
+                    
+                    <div class="overlay" id="overlay" onclick="closeZoom()">
+                        <img id="zoomedImage" src="" alt="Zoomed Image">
+                    </div>                    
+                </div>
+                <div class="literature-links">
+                    <a href="link-to-literature-page1" target="_blank">[Paper PDF]</a>
+                    <a href="link-to-literature-page2" target="_blank">[Repository]</a>
+                </div>
+            </div>
+            <!--This is the main container that contains the whole timeline.-->
+            <h1 id="expereince">Expereince</h1>
+            <section class="design-section">
+                <div class="timeline">
+                            <div class="timeline-date-left">
+                                <p>Aug/2024 - Current</p>
+                            </div>
+                            <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                            </div>
+                            <div class="timeline-component timeline-content">
+                                <h3>Support Specialist ---Technical Support Center, W&M</h3>
+                                <p>
+                                • Delivered 100+ hours of frontline support for students and faculty through phone, online chat, and walk-ins, serving as the initial point of contact for technical issues.<br>
+                                • Developed expertise in troubleshooting software issues on Windows and macOS systems. 
+                                </p>
+                            </div> 
+                            <div class="timeline-component timeline-content">
+                                <h3>Peer Tutor --- Academic Wellbeing, W&M</h3>
+                                <p>
+                                    • Achieved Level I Tutor Certification from the College Reading & Learning Association (CRLA). <br>
+                                    • Provided tutoring on Math and CS courses including algorithm, calculus, probability, and linear algebra.     
+                                </p>
+                            </div>
+                            <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                            </div>
+                            <div class="timeline-date-right">
+                                <p>Aug–Dec/2024</p>
+                            </div>
+            
+                            <div class="timeline-date-left">
+                                <p>May–Aug/2023</p>
+                            </div>
+            
+                            <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                            </div>
+                            <div class=" timeline-component timeline-content">
+                                <h3>Software Engineer --GeoLab, Global Research Institute, W&M</h3>
+                                <p>
+                                    • Managed and optimized webpage maintenance, including regular content updates, bug fixes, and performance enhancements to elevate the overall user experience. <br>
+                                    • Used Google Analytics to implement a page view tracking system and analyzed website traffic data to generate reports on user preferences and user flow. 
+                                </p>
+                        </div>
                     </div>
-                </div>    
+                </div> 
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
 
