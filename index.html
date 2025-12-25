@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilly Liu</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Resume/timeline styles (scoped to #resume only) -->
+    <link rel="stylesheet" href="resume.css" />
+
+    <!-- Favicon (make sure favicon.png exists next to this file) -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Font Awesome for icons used in timeline -->
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script>
         // function loadLeftPanel() {
         //     fetch('panel-left.html')
@@ -75,16 +86,17 @@
     </header>
     <div class="main-content">
         <div class="panel panel-left" id="left-panel">
-            <div class="nav-buttons">
-                <button class="nav-button" onclick="scrollToSection('project')">Project</button>
-                <button class="nav-button" onclick="scrollToSection('research')">Research</button>
-                <button class="nav-button" onclick="scrollToSection('experience')">Experience</button>
-            </div>
+
             <img src="/Resources/profile-picture.png" alt="Profile Picture" class="profile-picture">
             <h1>Lilly ("Yijin") Liu</h1>
             <p class="sub-text">Computer Science & Applied Math<br>
                 Undergraduate • 2026 Fall<br>
                 College of William and Mary</p>
+            <div class="nav-buttons">
+                <button class="nav-button" onclick="scrollToSection('research')">Research</button>
+                <button class="nav-button" onclick="scrollToSection('project')">Project</button>
+                <button class="nav-button" onclick="scrollToSection('resume')">Resume</button>
+            </div>
             <br>    
             <div class="social-links">
                 <a href="mailto:yliu85@wm.edu">
@@ -99,59 +111,104 @@
                     <img src="/Resources/github.png" alt="GitHub Icon">
                     GitHub
                 </a>
-                <a href="/Resources/transcript_250102.pdf" target="_blank">
-                    <img src="/Resources/transcript.png" alt="Transcript Icon">
-                    Transcript
-                </a>
             </div>
         </div>
         <div class="panel panel-right">
-            <h1>About Me</h1>
-            <p style="color:#6482AD;">
-                <img src="/Resources/megaphone.png" style="vertical-align: middle; margin-right: 5px;height:20px; width:20px;">
-                I am actively seeking internship opportunities. If you have any exciting projects or opportunities in mind, feel free to contact me at <strong>yliu85@wm.edu</strong>.
-            </p>
+            <h1>About</h1>
             <p>
-                I am a student at William & Mary, Class of 2026, pursuing a double major in Computer Science and Mathematics. 
-                <br>I have a major GPA of 4.0/4.0 and an overall GPA of 3.94/4.0. I have been studying computer science since my sophomore year of high school and am proficient in Java, Python, C++, HTML, CSS, JavaScript, and C. 
-                <br>Outside of classes, I conduct research on machine learning, focusing on topics such as Generative AI, Human-LLM Interaction, and Domain Adaptation for transformers. 
-                I also work as IT support in the Technology Support Center and as a tutor at the Tutor Zone. In my free time, I enjoy pencil sketching and swimming.
+                I’m an engineer seeking moonshot in Machine Learning field. I’m also an undergraduate, Class of 2026, studying Computer Science and Applied Mathematics at William & Mary.<br>
+                My research interests broadly span <strong>Human–AI Interaction</strong>, trustworthy and adaptive <strong>NLP Systems</strong>, and the design of model for low-resource settings with <strong>Domain Adaptation</strong>. I am particularly interested in how humans decide when to trust large language models, and how model behavior can be better understood, adapted, and communicated across domains.<br>
+                In my free time, I enjoy pencile sketching and sking.
             </p>
-            <button class="dl-button" onclick="downloadResume();">Download Resume</button>        
-            <h1>Skill Set</h1>
-            <p>The following word cloud enumerate the language and skills I possess. Font size indicates familarity.
+            <p style="color:#6482AD;">
+                In my free time, I enjoy pencil sketching, check out my works in <a href="link-to-literature-page2" target="_blank">here</a>.
+                <img src="/Resources/art-and-craft.png" style=" margin-right: 5px;height:20px; width:20px;">
+            </p>
+            <p>I'm a cell-like independent teamworker, strong in research and coding. Below are highlights of my technical skills where font size indicates familarity.
             </p>
             <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
                 <li><a href="#" data-weight="9">Python</a></li>
                 <li><a href="#" data-weight="7">C++</a></li>
-                <li><a href="#" data-weight="4">TensorFlow</a></li>
-                <li><a href="#" data-weight="8">JavaScript</a></li>
-                <li><a href="#" data-weight="8">HTML</a></li>
-                <li><a href="#" data-weight="5">Canvas</a></li>
+                <li><a href="#" data-weight="4">CSS</a></li>
+                <li><a href="#" data-weight="8">JS/React</a></li>
+                <li><a href="#" data-weight="8">Transformers</a></li>
+                <li><a href="#" data-weight="5">MLflow</a></li>
                 <li><a href="#" data-weight="4">IBM SPSS</a></li>
                 <li><a href="#" data-weight="6">Excel</a></li>
                 <li><a href="#" data-weight="5">Web Crawling</a></li>
                 <li><a href="#" data-weight="4">C</a></li>
                 <li><a href="#" data-weight="6">Git</a></li>
-                <li><a href="#" data-weight="5">Java</a></li>
-                <li><a href="#" data-weight="7">Qualtrics</a></li>
-                <li><a href="#" data-weight="9">CSS</a></li>
+                <li><a href="#" data-weight="5">JAVA</a></li>
+                <li><a href="#" data-weight="7">RAG</a></li>
+                <li><a href="#" data-weight="9">PyTorch</a></li>
                 <li><a href="#" data-weight="7">R</a></li>
-                <li><a href="#" data-weight="7">Flask</a></li>
-                <li><a href="#" data-weight="5">Canvas</a></li>
+                <li><a href="#" data-weight="7">LangChain</a></li>
+                <li><a href="#" data-weight="5">ComfyUI</a></li>
                 <li><a href="#" data-weight="4">IBM SPSS</a></li>
                 <li><a href="#" data-weight="6">Excel</a></li>
                 <li><a href="#" data-weight="5">Web Crawling</a></li>
-                <li><a href="#" data-weight="4">C</a></li>
-                <li><a href="#" data-weight="6">Git</a></li>
-                <li><a href="#" data-weight="7">LaTeX</a></li>
-                <li><a href="#" data-weight="8">OpenAI API</a></li>
+                <li><a href="#" data-weight="4">Docker</a></li>
+                <li><a href="#" data-weight="6">GIt</a></li>
+                <li><a href="#" data-weight="7">NumPy</a></li>
+                <li><a href="#" data-weight="8">API Design</a></li>
                 <li><a href="#" data-weight="4">SQL</a></li>
-
             </ul>
-            <div class="project-showcase" id="project">
-                <h1>Projects</h1>
-                <p>Dive into my latest side projects and explore the cutting-edge tools, frameworks, and techniques I've used to bring these ideas to life.</p>
+
+            <h1 id="research">Research</h1>
+            <div class="literature-block">
+                <div class="literature-info">
+                    <h3>Unsupervised Domain Adaptation of NER Tasks in Ancient Greek <span style="color: #9DB2BF;">Honor Thesis</span></h3>
+                    <p><strong>Yijin Liu</strong>, Ye Gao</p>
+                    <p>
+                        My work includes research on programmer trust in LLM-assisted coding, as well as technical investigations into transformer-based named entity recognition for low-resource languages, where I designed clustering-based confidence weighting methods to improve domain adaptation.
+                    </p>
+                    <div class="image-container">
+                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                            <img src="Resources/cluster1.png" alt="Visualization 1" class="literature-image">
+                        </div>
+                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                            <img src="Resources/cluster2.png" alt="Visualization 2" class="literature-image">
+                        </div>
+                    </div>
+                    
+                    <div class="overlay" id="overlay" onclick="closeZoom()">
+                        <img id="zoomedImage" src="" alt="Zoomed Image">
+                    </div>                    
+                </div>
+                <div class="literature-links">
+                    <a href="link-to-literature-page1" target="_blank">[Paper PDF]</a>
+                    <a href="link-to-literature-page2" target="_blank">[Repository]</a>
+                </div>
+            </div>            
+            <div class="literature-block">
+                <div class="literature-info">
+                    <h3>Mapping the Trust Terrain: LLMs in Software Engineering - Insights and Perspectives. <span style="color: #9DB2BF;">TOSEM'25</span></h3>
+                    <p>Khati Dipin, <strong>Yijin Liu</strong>, David N. Palacio, Yixuan Zhang, and Denys Poshyvanyk</p>
+                    <p>In the summer of 2024, I received a fellowship from the <a href="https://www.wm.edu/as/charlescenter/student-research/project-funding/summer/" class=custom-link>Charles Center</a> 
+                    to work on a project led by Professors <a href="https://zjanice.github.io/index.html" class=custom-link>Zhang</a> and <a href="https://www.cs.wm.edu/~denys/" class=custom-link>Poshyvanyk</a>. 
+                    The research involved exploring developers' trust in large language models (LLMs) for software engineering tasks through a combination of literature review and user studies. 
+                    I had the opportunity to present our findings at the <a href="https://www.wm.edu/as/charlescenter/student-research/research-events/fall-symposium/" class=custom-link>Fall Research Symposium</a>. </p>
+                    <div class="image-container">
+                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                            <img src="Resources/Symposium Poster.png" alt="Visualization 1" class="literature-image">
+                        </div>
+                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
+                            <img src="Resources/Pipeline for Survey.png" alt="Visualization 2" class="literature-image">
+                        </div>
+                    </div>
+                    
+                    <div class="overlay" id="overlay" onclick="closeZoom()">
+                        <img id="zoomedImage" src="" alt="Zoomed Image">
+                    </div>                    
+                </div>
+                <div class="literature-links">
+                    <a href="https://dl.acm.org/doi/10.1145/3771282" target="_blank">[Paper DPF]</a>
+                    <a href="https://github.com/LILLY928/Mapping-the-Trust-Terrain-LLMs-in-Software-Engineering-Insights-and-Perspectives" target="_blank">[Repository]</a>
+                </div>
+            </div>
+
+            <h1 id="project">Project</h1>
+            <div class="project-showcase">
                 <div class="projects">
                     <div class="project-box">
                         <a href="https://yijin928.pythonanywhere.com" style="text-decoration: none; color: inherit;">
@@ -184,10 +241,11 @@
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://github.com/LILLY928/LILLY928.github.io" style="text-decoration: none; color: inherit;">
+                        <a href="https://www.bldgmemphis.org/" style="text-decoration: none; color: inherit;">
                             <div>
-                                <img src="/Resources/brush.png" class="project-icon">
-                                <h3>Personal Website</h3>
+                                <img src="/Resources/idea.png" class="project-icon">
+                                <h3>BLDG Memphis</h3>
+                                <p>Built a responsive website on NationBuilder for a nonprofit organization.</p>
                                 <p>
                                     <span class="tag">HTML</span>
                                     <span class="tag">CSS</span>
@@ -196,86 +254,200 @@
                             </div>
                         </a>
                     </div>
+                                        <div class="project-box">
+                        <a href="https://huggingface.co/spaces/yijin928/Test/tree/main" style="text-decoration: none; color: inherit;">
+                            <div>
+                                <img src="/Resources/clapperboard.png" class="project-icon">
+                                <h3>VidGen API</h3>
+                                <p>Designed and implemented an automated text-to-video generation pipeline using ComfyUI workflows and Docker. </p>
+                                <p>
+                                    <span class="tag">ComfyUI</span>
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">Huggingface</span>
+                                </p>    
+                            </div>
+                        </a>
+                    </div>
                     <!-- Add more projects as needed -->
                 </div>
             </div>
-            <h1 id="research">Research</h1>
-            <p>I am a research assistant in Prof. <a href="https://www.wm.edu/as/computerscience/people/gao_ye.php" class=custom-link>Ashley Gao</a>'s team. 
-                My research interests lie in Human-computer Interaction (HCI), Large Language Models (LLMs), and Software Engineering (SE).
-            </p>
-            <div class="literature-block">
-                <div class="literature-info">
-                    <h3>Mapping the Trust Terrain: LLMs in Software Engineering - Insights and Perspectives. <span style="color: #9DB2BF;">ICSE'25</span></h3>
-                    <p>Khati Dipin, <strong>Yijin Liu</strong>, David N. Palacio, Yixuan Zhang, and Denys Poshyvanyk</p>
-                    <p>In the summer of 2024, I received a fellowship from the <a href="https://www.wm.edu/as/charlescenter/student-research/project-funding/summer/" class=custom-link>Charles Center</a> 
-                    to work on a project led by Professors <a href="https://zjanice.github.io/index.html" class=custom-link>Zhang</a> and <a href="https://www.cs.wm.edu/~denys/" class=custom-link>Poshyvanyk</a>. 
-                    The research involved exploring developers' trust in large language models (LLMs) for software engineering tasks through a combination of literature review and user studies. 
-                    I had the opportunity to present our findings at the <a href="https://www.wm.edu/as/charlescenter/student-research/research-events/fall-symposium/" class=custom-link>Fall Research Symposium</a>. </p>
-                    <div class="image-container">
-                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
-                            <img src="Resources/Symposium Poster.png" alt="Visualization 1" class="literature-image">
-                        </div>
-                        <div class="image-wrapper" onclick="showZoom(this)" onclick="hideZoom(this)">
-                            <img src="Resources/Pipeline for Survey.png" alt="Visualization 2" class="literature-image">
-                        </div>
+
+            <h1 id="resume">Work Experience</h1>
+            <div class="resume-container" id="resume">
+
+                <div class="timeline-wrap">
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Machine Learning Researcher</h3>
+                        <p>Aug 2025 - Current</p>
                     </div>
-                    
-                    <div class="overlay" id="overlay" onclick="closeZoom()">
-                        <img id="zoomedImage" src="" alt="Zoomed Image">
-                    </div>                    
-                </div>
-                <div class="literature-links">
-                    <a href="link-to-literature-page1" target="_blank">[Paper PDF]</a>
-                    <a href="link-to-literature-page2" target="_blank">[Repository]</a>
-                </div>
-            </div>
-            <!--This is the main container that contains the whole timeline.-->
-            <h1 id="experience">Experience</h1>
-            <section class="design-section">
-                <div class="timeline">
-                            <div class="timeline-date-left">
-                                <p>Aug/2024 - Current</p>
-                            </div>
-                            <div class="timeline-middle">
-                                <div class="timeline-circle"></div>
-                            </div>
-                            <div class="timeline-component timeline-content">
-                                <h3>Support Specialist ---Technical Support Center, W&M</h3>
-                                <p>
-                                • Delivered 100+ hours of frontline support for students and faculty through phone, online chat, and walk-ins, serving as the initial point of contact for technical issues.<br>
-                                • Developed expertise in troubleshooting software issues on Windows and macOS systems. 
-                                </p>
-                            </div> 
-                            <div class="timeline-component timeline-content">
-                                <h3>Peer Tutor --- Academic Wellbeing, W&M</h3>
-                                <p>
-                                    • Achieved Level I Tutor Certification from the College Reading & Learning Association (CRLA). <br>
-                                    • Provided tutoring on Math and CS courses including algorithm, calculus, probability, and linear algebra.     
-                                </p>
-                            </div>
-                            <div class="timeline-middle">
-                                <div class="timeline-circle"></div>
-                            </div>
-                            <div class="timeline-date-right">
-                                <p>Aug–Dec/2024</p>
-                            </div>
-            
-                            <div class="timeline-date-left">
-                                <p>May–Aug/2023</p>
-                            </div>
-            
-                            <div class="timeline-middle">
-                                <div class="timeline-circle"></div>
-                            </div>
-                            <div class=" timeline-component timeline-content">
-                                <h3>Software Engineer --GeoLab, Global Research Institute, W&M</h3>
-                                <p>
-                                    • Managed and optimized webpage maintenance, including regular content updates, bug fixes, and performance enhancements to elevate the overall user experience. <br>
-                                    • Used Google Analytics to implement a page view tracking system and analyzed website traffic data to generate reports on user preferences and user flow. 
-                                </p>
-                        </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
                     </div>
-                </div> 
+
+                    <div class="timeline-right">
+                        <h3><a href="https://www.wm.edu/offices/iic/" target="_blank">Institute for Integrative Conservation, W&amp;M</a></h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Built a Python pipeline to convert 1,000+ PDFs into a Milvus vector database; tuned hyperparameters for retrieval accuracy.<br>
+                        • Deployed a RAG chatbot on Drupal integrating the VDB; validated through user testing by San Diego Zoo experts.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Mahince Learning Intern</h3>
+                        <p>May 2025 - Aug 2025</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3><a href="https://www.anytimeai.ai/" target="_blank">AnytimeAI</a></h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Integrated a live agent–AI chatbot system into the company website; designed and optimized conversation flow pipelines.<br>
+                        • Implemented reCAPTCHA and adversarial defense measures to safeguard against malicious use.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Machine Learning Intern</h3>
+                        <p>Jan 2025 - May 2025</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3><a href="https://www.musicnbrain.com/" target="_blank">MusicNBrain</a></h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Designed a scalable AI video generation pipeline in ComfyUI, integrating text-to-video diffusion and deep face-swapping models.<br>
+                        • Deployed the model on AWS EC2 and used Docker to streamline CI/CD processes for automated updates.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Designer/Website Developer</h3>
+                        <p>Jan 2025 - Apr 2025</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3>Prometheus</h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Collaborated with a nonprofit organization to redesign their official website, rebuilding 26 web pages with HTML/CSS and JS to deliver an accessible and responsive design.<br>
+                        • Migrated legacy content to NationBuilder, streamlining backend management and reducing site maintenance complexity.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Support Specialist</h3>
+                        <p>Aug 2024 - Oct 2025</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3>Technical Support Center, W&amp;M</h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Delivered 300+ hours of frontline support for students and faculty through phone, online chat, and walk-ins, serving as the initial point of contact for technical issues.<br>
+                        • Developed expertise in troubleshooting software issues on Windows and macOS systems.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Peer Tutor</h3>
+                        <p>Aug 2023 - Dec 2023</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3>Academic Wellbeing, W&amp;M</h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Achieved Level I Tutor Certification from the College Reading & Learning Association (CRLA).<br>
+                        • Provided tutoring on Math and CS courses including algorithm, calculus, probability, and linear algebra.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Website Developer</h3>
+                        <p>May 2023 - Aug 2023</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3><a href="https://sites.google.com/view/wmgeolab/home" target="_blank">Global Research Institute, W&amp;M</a></h3>
+                        <div class="divider"></div>
+                        <p>
+                        • Managed and optimized webpage maintenance, including regular content updates, bug fixes, and performance enhancements to elevate the overall user experience.<br>
+                        • Used Google Analytics to implement a page view tracking system and analyzed website traffic data to generate reports on user preferences and user flow.
+                        </p>
+                    </div>
+                    </div>
+
+                </div><!-- /timeline-wrap -->
+
+            </div><!-- /resume-container -->
+
+            <h1 >Education</h1>
+            <div class="resume-container" id="resume">
+
+                <div class="timeline-wrap">
+                    <div class="timeline-block">
+                    <div class="timeline-left">
+                        <h3>Bachelor of Science</h3>
+                        <p>Aug 2022 - May 2026</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-ico"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="timeline-right">
+                        <h3>College of William and Mary</h3>
+                        <div class="divider"></div>
+                        <p>
+                            Double majored in Computer Science and Applied Mathematics with a GPA of 3.95/4.0.
+                        </p>
+                    </div>
+                    </div>
+
+                </div><!-- /timeline-wrap -->
+
+            </div><!-- /resume-container -->
+            <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=zOQ-Ce6mwl6GIgS8RuW2mZB_WxTza5bcVYfR7Vz3iUc"></script>
+            <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=6__VVHmuRKGwKCTOtSmlc4vQzLhxLBHplvluiTcz9LM&cl=ffffff&w=a"></script>
             </div>
         </div>
     </body>
